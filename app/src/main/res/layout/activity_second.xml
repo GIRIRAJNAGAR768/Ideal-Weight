@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="30sp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select gender: "
+            android:textColor="#00f"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup">
+        <RadioButton
+            android:id="@+id/maleRadioButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Male"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+        <RadioButton
+            android:id="@+id/femaleRadioButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp" />
+        </RadioGroup>
+        <!-- Height -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:inputType="numberDecimal"
+                android:hint="Enter height in cm" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- weight -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:inputType="numberDecimal"
+                android:hint="Enter weight" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:textColor="#00f"
+            android:background="@color/colorAccent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="Get Result"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Something about the programmer."
+            android:gravity="center_horizontal"
+            android:textColor="#00f"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</ScrollView>
